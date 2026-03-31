@@ -76,6 +76,21 @@ hktv search 牛奶 -j
 
 Query historical price data for a product.
 
+The `<code>` is the product code (商品編號). You can find it in the `search` results — each product displays a `Code` field. For example:
+
+```
+$ hktv search 牛奶
+
+Found 60 results:
+
+1. Meiji 牛乳
+   Code: A1234567        <-- Use this code
+   Price: HK$29.9
+   Link: https://www.hktvmall.com/...
+```
+
+Then use the code to check price history:
+
 ```bash
 hktv price get <code>
 ```
