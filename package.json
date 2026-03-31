@@ -1,10 +1,22 @@
 {
   "name": "hktv-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CLI for HKTVmall — search products and check prices",
+  "main": "dist/bundle.cjs",
+  "bin": {
+    "hktv": "dist/bundle.cjs"
+  },
+  "files": [
+    "dist/bundle.cjs"
+  ],
   "scripts": {
+    "build": "esbuild index.js --bundle --platform=node --format=cjs --outfile=dist/bundle.cjs --packages=bundle",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathsgod/hktv-cli"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +24,7 @@
   "dependencies": {
     "commander": "^14.0.3"
   },
-  "bin": {
-    "hktv": "./index.js"
+  "devDependencies": {
+    "esbuild": "^0.27.4"
   }
 }
