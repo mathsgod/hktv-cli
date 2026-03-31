@@ -13,7 +13,7 @@ metadata:
 
 # hktv search
 
-> **PREREQUISITE:** Install the CLI globally with `npm install -g .` in the project root.
+> **PREREQUISITE:** Install the CLI globally with `npm install -g hktv-cli`.
 
 ```bash
 hktv <command> [options]

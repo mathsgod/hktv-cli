@@ -7,7 +7,7 @@ A command-line tool for searching products and checking prices on HKTVmall, Hong
 ## Installation
 
 ```bash
-npm install -g .
+npm install -g hktv-cli
 ```
 
 ## AI Agent Skills
