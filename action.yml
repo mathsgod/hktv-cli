@@ -1,0 +1,14 @@
+name: 'Setup hktv-cli'
+description: 'Make the hktv CLI command available without npm install'
+runs:
+  using: 'composite'
+  steps:
+    - name: Add hktv to PATH
+      shell: bash
+      run: |
+        HKTV_BIN="$RUNNER_TEMP/hktv-bin"
+        mkdir -p "$HKTV_BIN"
+        echo '#!/bin/bash' > "$HKTV_BIN/hktv"
+        echo 'node "${{ github.action_path }}/dist/bundle.cjs" "$@"' >> "$HKTV_BIN/hktv"
+        chmod +x "$HKTV_BIN/hktv"
+        echo "$HKTV_BIN" >> "$GITHUB_PATH"
