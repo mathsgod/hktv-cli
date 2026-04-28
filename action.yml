@@ -1,5 +1,8 @@
 name: 'Setup hktv-cli'
 description: 'Make the hktv CLI command available without npm install'
+branding:
+  icon: 'check-circle'
+  color: 'green'
 runs:
   using: 'composite'
   steps:
