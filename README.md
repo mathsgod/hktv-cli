@@ -10,6 +10,17 @@ A command-line tool for searching products and checking prices on HKTVmall, Hong
 npm install -g hktv-cli
 ```
 
+## GitHub Workflow Action
+
+Add the following step to your GitHub Workflow Action to use this CLI:
+
+```yaml
+- name: Setup hktv-cli
+  uses: mathsgod/hktv-cli@v1
+```
+
+Now you can use the `hktv-cli` commands in your workflow.
+
 ## AI Agent Skills
 
 This repo ships Agent Skills (`SKILL.md` files) for every command — ready to use with GitHub Copilot, Cursor, and any MCP-compatible AI agent.
