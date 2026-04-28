@@ -128,4 +128,4 @@ hktv price get A1234567 -j
 
 ## License
 
-ISC
+MIT License. See [LICENSE](LICENSE) for details.
