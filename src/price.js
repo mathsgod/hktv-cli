@@ -81,10 +81,14 @@ program
   .option('-j, --json', '輸出 JSON')
   .action(async (code, options) => {
     try {
-      console.log(`正在查詢商品: ${code}`);
-      console.log('正在獲取價格令牌...');
+      if (!options.json) {
+        console.log(`正在查詢商品: ${code}`);
+        console.log('正在獲取價格令牌...');
+      }
       const token = await getPriceApiToken(code);
-      console.log('正在查詢歷史價格...');
+      if (!options.json) {
+        console.log('正在查詢歷史價格...');
+      }
       const data = await fetchPriceChart(code, token);
 
       if (options.json) {
